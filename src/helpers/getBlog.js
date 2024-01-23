@@ -17,10 +17,10 @@ export function getBlog() {
     .then(post => post);
 }
 
-export function getPostDateils(slug) {
+export function getPostDetails(slug) {
   return client
     .fetch(
-      `*[slug.current == "${slug}"] {
+      `*[_type == "post" && slug.current == "${slug}"] {
         title,
         body,
         publishedAt,

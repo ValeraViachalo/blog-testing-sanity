@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion';
 import { Link, useLocation, useParams } from 'react-router-dom';
-import { getPostDateils } from './helpers/getBlog';
+import { getPostDetails } from './helpers/getBlog';
 import SanityBlockContent from '@sanity/block-content-to-react';
 import { motionParametr } from './helpers/motionParametr';
 
@@ -19,7 +19,7 @@ export const PostDetails = () => {
   }
 
   useEffect(() => {
-    getPostDateils(postSlug).then((p) => {
+    getPostDetails(postSlug).then((p) => {
       setPost(p[0]);
     });
   }, []);

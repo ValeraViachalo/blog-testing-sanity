@@ -45,7 +45,7 @@ export const Home = () => {
               <Link
                 to={`/posts/${currProd.slug.current}`}
                 className="blog__card"
-                key={`blog_${index}`}
+                key={`b_${index}`}
               >
                 <img
                   src={currProd.mainImage.asset.url}
