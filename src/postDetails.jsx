@@ -9,7 +9,8 @@ export const PostDetails = () => {
   const [post, setPost] = useState([])
   const location = useLocation();
   const { pathname } = location;
-  const postSlug = pathname.split('/')[2];
+  const postSlug = pathname.split('/posts/')[1];
+  console.log(postSlug);
 
   const getDate = (date) => {
     const preparedDate = new Date(date);
